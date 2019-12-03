@@ -10,13 +10,6 @@ class Config(object):
 
     @classmethod
     def init_app(cls, app):
-        # DEBUG -> stdout
-        stdh = logging.StreamHandler(sys.stdout)
-        stdh.setLevel(logging.DEBUG)
-        stdh_fmt = logging.Formatter('%(name)s:%(levelname)s:%(message)s')
-        stdh.setFormatter(stdh_fmt)
-
-        app.logger.addHandler(stdh)
         return app
 
 
