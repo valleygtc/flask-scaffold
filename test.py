@@ -31,11 +31,11 @@ class TestExample(unittest.TestCase):
 
     def test_default(self):
         with test_app.test_client() as client:
-            rv = client.get(
+            resp = client.get(
                 self.url,
                 headers={'Authorization': authorization},
             )
-            json_data = rv.get_json()
+            json_data = resp.get_json()
             self.assertTrue(json_data['success'])
 
 
