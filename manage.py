@@ -1,18 +1,18 @@
 import os
 from app import create_app, db
-from app.models import PlanTask # TODO: 
+from app.models import Student # TODO: 
 
 
 app = create_app(os.getenv('FLASK_ENV', 'production'))
 
 
 def make_shell_context():
-    return dict(db=db, PlanTask=PlanTask) # TODO
+    return dict(db=db, Student=Student) # TODO
 
 app.shell_context_processor(make_shell_context)
 
 
-"""create tables: plan_task""" # TODO
+"""create tables: student""" # TODO
 @app.cli.command('create_tables')
 def create_tables():
     db.create_all()

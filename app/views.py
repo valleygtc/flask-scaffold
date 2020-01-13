@@ -1,7 +1,7 @@
 from flask import Blueprint, json
 
 from . import db
-from .models import PlanTask
+from .models import Student
 
 
 bp_main = Blueprint('bp_main', __name__)

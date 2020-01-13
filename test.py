@@ -2,7 +2,7 @@ import unittest
 import sys
 
 from app import create_app, db
-from app.models import PlanTask # TODO
+from app.models import Student # TODO
 
 
 test_app = create_app('test')
@@ -11,7 +11,7 @@ test_app = create_app('test')
 # TODO
 def fake_records(n):
     for i in range(n):
-        e = PlanTask(field1=value1, field2=value2)
+        e = Student(name='namexxx', age=20, address='addressxxx')
         db.session.add(e)
     db.session.commit()
 
