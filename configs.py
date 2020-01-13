@@ -24,11 +24,8 @@ class TestingConfig(Config):
 class ProductionConfig(Config):
     @classmethod
     def init_app(cls, app):
-        # INFO -> stdout
-        stdh = logging.StreamHandler(sys.stdout)
-        stdh.setLevel(logging.INFO)
-        stdh_fmt = logging.Formatter('%(name)s:%(levelname)s:%(message)s')
-        stdh.setFormatter(stdh_fmt)
+        app.logger.setLevel(logging.INFO)
+        # 注：Flask默认StreamHandler：所有级别 -> wsgi_errors_stream(which is usually sys.stderr)
 
         # WARNING -> log file
         if not os.path.isdir('log'):
@@ -42,10 +39,8 @@ class ProductionConfig(Config):
             encoding='utf-8',
         )
         fh.setLevel(logging.WARNING)
-        fh_fmt = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
-        fh.setFormatter(fh_fmt)
-
-        app.logger.addHandler(stdh)
+        formatter = logging.Formatter('[%(asctime)s] %(levelname)s in %(module)s: %(message)s')
+        fh.setFormatter(formatter)
         app.logger.addHandler(fh)
 
         return app
