@@ -21,13 +21,20 @@ $ pip install -r requirements_dev.txt -i https://pypi.tuna.tsinghua.edu.cn/simpl
 
 run:
 ```bash
+# 激活虚拟环境
 $ source .venv/bin/activate
-$ source .env
 
-$ flask create_tables # 创建数据库表
+# 设置程序所需要的环境变量
+$ export FLASK_APP=manage.py
+$ export FLASK_ENV=development | test | production
+$ export DATABASE_URI='mysql+mysqlconnector://{user}:{password}@{localhost}/{db_name}?charset=utf8' # 指定字符集utf8
+$ export PORT=5000
+
+$ flask create_tables # 创建数据库表。
+
 $ flask run [--host='0.0.0.0'/'::']
 $ python run.py
 $ bash run.sh
 ```
 
-git: 注意：在加入git仓库之前，要先将`.env`加入`.gitignore`中。
+git: 注意：在加入git仓库之前，要先将`run.sh`加入`.gitignore`中。
