@@ -2,7 +2,8 @@
 
 __pycache__/
 .venv/
-log/
-run.sh
 
 需求/
+
+log/
+.env

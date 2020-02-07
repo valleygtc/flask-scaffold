@@ -2,6 +2,7 @@ TODO: 不要忘了更改这个README
 # 简介
 python3 + Flask框架快速开发后台api的脚手架。
 
+
 # 使用
 ```bash
 $ git clone <repo> [<dir_name>]
@@ -24,17 +25,24 @@ run:
 # 激活虚拟环境
 $ source .venv/bin/activate
 
-# 设置程序所需要的环境变量
-$ export FLASK_APP=manage.py
-$ export FLASK_ENV=development | test | production
-$ export DATABASE_URI='mysql+mysqlconnector://{user}:{password}@{localhost}/{db_name}?charset=utf8' # 指定字符集utf8
-$ export PORT=5000
+$ touch .env # 并在文件中填写好程序所需环境变量。
+
+$ source .env # 读入环境变量。
+$ export FLASK_APP FLASK_ENV DATABASE_URI PORT
 
 $ flask create_tables # 创建数据库表。
 
 $ flask run [--host='0.0.0.0'/'::']
 $ python run.py
 $ bash run.sh
+```
+
+.env文件示例：
+```
+FLASK_APP=manage.py
+FLASK_ENV=development | test | production
+DATABASE_URI=mysql+mysqlconnector://{user}:{password}@{localhost}/{db_name}?charset=utf8
+PORT=5000
 ```
 
 git: 注意：在加入git仓库之前，要先将`run.sh`加入`.gitignore`中。
