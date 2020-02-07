@@ -1,5 +1,4 @@
 #!/bin/sh
 . .venv/bin/activate
-. .env
-export FLASK_APP FLASK_ENV DATABASE_URI PORT
+. env.sh
 python run.py
