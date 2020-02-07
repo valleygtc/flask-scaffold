@@ -15,6 +15,7 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    SQLALCHEMY_ECHO = True
 
 
 class TestingConfig(Config):
