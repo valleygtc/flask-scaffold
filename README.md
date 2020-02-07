@@ -25,11 +25,9 @@ run:
 # 激活虚拟环境
 $ source .venv/bin/activate
 
-$ touch .env # 并在文件中填写好程序所需环境变量。
+$ cp env.sh.example env.sh # 并在 env.sh 中填写好程序运行所需环境变量。
 
-$ source .env # 读入环境变量。
-$ export FLASK_APP FLASK_ENV DATABASE_URI PORT
-
+$ source env.sh # 读入环境变量。
 $ flask create_tables # 创建数据库表。
 
 $ flask run [--host='0.0.0.0'/'::']
