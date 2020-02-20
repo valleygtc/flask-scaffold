@@ -18,7 +18,7 @@ $ pip install -r requirements_dev.txt -i https://pypi.tuna.tsinghua.edu.cn/simpl
 
 全局搜索TODO，并按照MVC的顺序进行代码填写。
 
-单元测试：python -m unittest test.py
+单元测试：python -m unittest discover
 
 run:
 ```bash

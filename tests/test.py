@@ -1,11 +1,10 @@
 import unittest
 import sys
 
-from app import create_app, db
+from app import db
 from app.models import Student # TODO
 
-
-test_app = create_app('test')
+from tests import test_app
 
 
 # TODO
