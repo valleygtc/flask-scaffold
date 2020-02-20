@@ -12,9 +12,9 @@ def make_shell_context():
 app.shell_context_processor(make_shell_context)
 
 
-"""create tables: student""" # TODO
-@app.cli.command('create_tables')
-def create_tables():
+"""create table: student""" # TODO
+@app.cli.command('create_table')
+def create_table():
     db.create_all()
 
 
