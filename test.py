@@ -30,13 +30,13 @@ class TestExample(unittest.TestCase):
             db.drop_all()
 
     def test_default(self):
-        with test_app.test_client() as client:
-            resp = client.get(
-                self.url,
-                headers={'Authorization': authorization},
-            )
-            json_data = resp.get_json()
-            self.assertTrue(json_data['success'])
+        client = test_app.test_client()
+        resp = client.get(
+            self.url,
+            headers={'Authorization': authorization},
+        )
+        json_data = resp.get_json()
+        self.assertTrue(json_data['success'])
 
 
 if __name__ == '__main__':
