@@ -32,7 +32,6 @@ class TestExample(unittest.TestCase):
         client = test_app.test_client()
         resp = client.get(
             self.url,
-            headers={'Authorization': authorization},
         )
         json_data = resp.get_json()
         self.assertTrue(json_data['success'])
