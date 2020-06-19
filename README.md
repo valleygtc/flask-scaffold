@@ -35,12 +35,10 @@ $ python run.py
 $ bash run.sh
 ```
 
-.env文件示例：
+env.sh 文件示例：
 ```
 FLASK_APP=manage.py
 FLASK_ENV=development | test | production
 DATABASE_URI=mysql+mysqlconnector://{user}:{password}@{localhost}/{db_name}?charset=utf8
 PORT=5000
 ```
-
-git: 注意：在加入git仓库之前，要先将`run.sh`加入`.gitignore`中。
