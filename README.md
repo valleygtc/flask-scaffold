@@ -11,9 +11,9 @@ $ rm -rf .git
 # 创建虚拟环境并安装依赖
 $ python3 -m venv .venv
 $ . .venv/bin/activate
-$ pip install -r requirements_top.txt -i https://pypi.tuna.tsinghua.edu.cn/simple # 使用清华大学镜像源
+$ pip install -r requirements-top.txt -i https://pypi.tuna.tsinghua.edu.cn/simple # 使用清华大学镜像源
 $ pip freeze > requirements.txt # 固定依赖包版本号
-$ pip install -r requirements_dev.txt -i https://pypi.tuna.tsinghua.edu.cn/simple # 使用清华大学镜像源
+$ pip install -r requirements-dev.txt -i https://pypi.tuna.tsinghua.edu.cn/simple # 使用清华大学镜像源
 ```
 
 全局搜索TODO，并按照MVC的顺序进行代码填写。
