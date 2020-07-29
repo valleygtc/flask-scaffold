@@ -1,4 +1,4 @@
 #!/bin/sh
 . .venv/bin/activate
 . env.sh
-python run.py
+exec python run.py
