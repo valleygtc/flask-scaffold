@@ -40,4 +40,3 @@ class TestExample(unittest.TestCase):
 if __name__ == '__main__':
     if sys.argv[1] == 'fake_records':
         fake_records(20)
-        

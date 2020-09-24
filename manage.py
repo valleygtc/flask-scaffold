@@ -1,6 +1,6 @@
 import os
 from app import create_app, db
-from app.models import Student # TODO: 
+from app.models import Student # TODO:
 
 
 app = create_app(os.getenv('FLASK_ENV', 'production'))
